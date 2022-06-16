@@ -1,5 +1,7 @@
 function hasTargetSum(array, target) {
 // Write your algorithm here
+
+
 const objectForNumbersThatMakeTarget = {};
 
 for (const element of array) {
@@ -9,6 +11,10 @@ for (const element of array) {
 }
 
 return false;
+
+
+
+
 }
   
 
