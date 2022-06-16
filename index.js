@@ -1,13 +1,32 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+// Write your algorithm here
+const objectForNumbersThatMakeTarget = {};
+
+for (const element of array) {
+  const result = target - element;
+  if (result in objectForNumbersThatMakeTarget) return true;
+    objectForNumbersThatMakeTarget[element] = true;
 }
+
+return false;
+}
+  
+
+  
+
 
 /* 
   Write the Big O time complexity of your function here
+  since I have one loop that will be executed n times, the time complexity is n which is linear.
 */
 
 /* 
   Add your pseudocode here
+
+  create an object variable that will hold numbers in array as keys and true as value.
+  loop though an array.
+  create variable result which is the result of target - number
+  return tru if the result is equal to any number in the array.
 */
 
 /*
@@ -32,3 +51,6 @@ if (require.main === module) {
 }
 
 module.exports = hasTargetSum;
+
+
+
